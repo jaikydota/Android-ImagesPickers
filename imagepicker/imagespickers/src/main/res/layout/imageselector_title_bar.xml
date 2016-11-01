@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/imageselector_title_bar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:onClick="doClick">
+
+        <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:contentDescription="@string/imgbtn_set"
+                android:scaleType="centerInside"
+                android:src="@drawable/global_backwhite_selector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="所有图片"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_worlduc_sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:clickable="true"
+            android:text="完成"
+            android:textColor="@drawable/global_textcolor_white_selector"
+            android:textSize="@dimen/title_both_worlduc_sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

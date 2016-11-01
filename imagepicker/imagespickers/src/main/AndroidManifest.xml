@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.jaiky.imagespickers">
+
+    <!-- 从sdcard中读取数据的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 在sdCard中创建与删除文件 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"  >
+
+        <activity
+            android:name="com.jaiky.imagespickers.ImageSelectorActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImageSelectorTheme"/>
+    </application>
+
+</manifest>

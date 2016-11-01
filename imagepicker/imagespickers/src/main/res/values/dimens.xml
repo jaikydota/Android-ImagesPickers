@@ -1,0 +1,57 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="image_thumbnail_size">50dp</dimen>
+    <dimen name="image_thumbnail_spacing">1dp</dimen>
+    <dimen name="dotLeftMargin">10dp</dimen>
+    <dimen name="dotRightMargin">10dp</dimen>
+    <dimen name="ui_10_dip">10dip</dimen>
+
+    <dimen name="image_size">120dp</dimen>
+    <dimen name="space_size">2dp</dimen>
+    <dimen name="folder_cover_size">72dp</dimen>
+
+
+    <!-- dp类 -->
+    <dimen name="title_height_worlduc_dp">45dp</dimen>
+    <dimen name="layout_bothdistance_worlduc_dp">12dp</dimen>
+    <dimen name="layout_bothdistance15_worlduc_dp">15dp</dimen>
+    <dimen name="layout_bothdistance10_worlduc_dp">10dp</dimen>
+
+    <dimen name="layout_verticaldistance_worlduc_dp">10dp</dimen>
+    <dimen name="layout_verticaldistance12_worlduc_dp">12dp</dimen>
+    <dimen name="layout_verticaldistance15_worlduc_dp">15dp</dimen>
+    <!-- dp类 -->
+
+    <!-- 文字类 -->
+    <dimen name="title_worlduc_sp">20sp</dimen>
+    <dimen name="title_both_worlduc_sp">16sp</dimen>
+
+    <dimen name="content_smalltitle_worlduc_sp">16sp</dimen>
+    <dimen name="content_title_worlduc_sp">18sp</dimen>
+    <dimen name="content_worlduc_sp">16sp</dimen>
+
+    <dimen name="name_worlduc_sp">16sp</dimen>
+    <dimen name="name_comment_worlduc_sp">15sp</dimen>
+
+    <dimen name="flaglarge_worlduc_sp">18sp</dimen>
+    <dimen name="flag_worlduc_sp">17sp</dimen>
+    <dimen name="button_worlduc_sp">16sp</dimen>
+    <dimen name="select_worlduc_sp">15sp</dimen>
+
+    <dimen name="textlarge_worlduc_sp">15sp</dimen>
+    <dimen name="text_worlduc_sp">14sp</dimen>
+    <dimen name="textnormal_worlduc_sp">13sp</dimen>
+    <dimen name="textsmall_worlduc_sp">12sp</dimen>
+
+    <dimen name="hint_worlduc_sp">12sp</dimen>
+    <dimen name="hint2_worlduc_sp">11sp</dimen>
+    <dimen name="hint3_worlduc_sp">10sp</dimen>
+</resources>

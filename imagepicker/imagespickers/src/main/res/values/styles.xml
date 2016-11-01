@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="BaseTheme" parent="android:Theme.Light.NoTitleBar" />
+
+    <style name="ImageSelectorTheme" parent="BaseTheme" />
+
+</resources>
