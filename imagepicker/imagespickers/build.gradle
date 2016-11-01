@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:24.2.1'
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'imagespickers'//在bintray网站中项目中填写的名称
+
+    publishedGroupId = 'com.jaiky.imagespickers'//一般为包名
+    libraryName = 'imagespickers'//library名字需要和本地的lib module一致
+    artifact = 'imagespickers'//同上
+
+    libraryDescription = 'An android images picker.'//项目描述
+    libraryVersion = '1.0.0'//项目版本号,只需要在每次更新的时候填写
+
+    developerId = 'jaiky'//开发者Id
+    developerName = 'Jaiky'//开发者名称
+    developerEmail = 'jaikydota@gmail.com'//邮箱
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ['Apache-2.0']
+}
+
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/bintrayv1.gradle'
