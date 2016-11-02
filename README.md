@@ -201,7 +201,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
-[代码示例]
+## 代码示例
 ```java
 public class MainActivity extends AppCompatActivity {
 
