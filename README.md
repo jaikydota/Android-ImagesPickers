@@ -8,7 +8,7 @@ Android相册选择工具，实现了拍照、图片选择（单选/多选）、
 [Download Apk](https://github.com/jaikydota/Andorid-ImagesPickers/blob/master/Demo/app-debug.apk)
  
 
-## ImageSelector 优点
+## ImagesPickers 优点
 * UI重改
 * 所有功能可配置
 * 解决OOM情况
@@ -196,7 +196,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 ```
 
 [代码示例]
-```
+```java
 public class MainActivity extends AppCompatActivity {
 
     private Button btn1, btn2;
@@ -287,9 +287,6 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
-## 历史版本说明
-### 1.0.0 
-* 选择图片功能
  
 ## 关于作者
 * Email: [jaikydota@163.com](mailto:jaikydota@163.com)
