@@ -16,9 +16,9 @@ Android相册选择工具，实现了拍照、图片选择（单选/多选）、
 * 支持裁剪功能
 
 
-## Gif展示
+## Demo展示
 
-![单选截图](https://github.com/jaikydota/Andorid-ImagesPickers/blob/master/Demo/GIF.gif) 
+![Demo演示](https://github.com/jaikydota/Andorid-ImagesPickers/blob/master/Demo/GIF.gif) 
 
  
 ## 使用说明
