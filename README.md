@@ -34,17 +34,20 @@ Andorid-ImagesPickers是一个图片选择（单选/多选）、拍照、裁剪�
 #### 通过Gradle抓取
 
 ```groovy
-//只上传到了jcenter
+//只上传到了jcenter,在项目gradle下使用jcenter
 allprojects {
     repositories {
         jcenter()
     }
 }
+```
+
+```groovy
+//在module中添加依赖  
 dependencies {
     compile 'com.jaikydota.imagespickers:imagespickers:1.0.0'
 }
 ```
-
 
 
 ### 步骤二：
