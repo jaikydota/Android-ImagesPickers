@@ -41,7 +41,7 @@ allprojects {
     }
 }
 dependencies {
-    com.jaikydota.imagespickers:imagespickers:1.0.0
+    compile 'com.jaikydota.imagespickers:imagespickers:1.0.0'
 }
 ```
 
