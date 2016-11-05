@@ -8,7 +8,7 @@ Andorid-ImagesPickers是一个图片选择（单选/多选）、拍照、裁剪�
 [Download Apk](https://github.com/jaikydota/Andorid-ImagesPickers/blob/master/Demo/app-debug.apk)
  
 
-## 问什么使用ImagesPickers
+## 为什么使用ImagesPickers
 也许有人会问：系统不是有相册选择器吗，为什么还有做一个图片选择器呢，有必要吗？我告诉你很有必要。微信，QQ等等App它们都是自己带图片选择器，并没有直接调系统的图片选择器。为什么要这么做呢？我总结出一下几点，使用本图片选择器下面的问题你都不用考虑，就是这么的任性：
  * 最大的问题就是兼容性了，手机厂商那么多，相册软件那么多从而引起各种奇葩的问题
  * 有些手机拍照图片倒立情况（如三星和魅族）
