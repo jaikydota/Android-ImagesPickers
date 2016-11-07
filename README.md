@@ -173,7 +173,7 @@ ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
 ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
 ```
 
-##### 单选自定义裁剪 Custon Crop
+##### 单选自定义裁剪 Custom Crop
 ```java
  ImageConfig imageConfig
         = new ImageConfig.Builder(new GlideLoader())
