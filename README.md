@@ -124,7 +124,7 @@ public class GlideLoader implements com.yancy.imageselector.ImageLoader {
         // 已选择的图片路径
         .pathList(path)
         // 拍照后存放的图片路径（默认 /temp/picture） （会自动创建）
-        .filePath("/ImageSelector/Pictures")
+        .filePath("/temp/picture")
         .build();
 
 
@@ -144,7 +144,7 @@ ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
         // 开启拍照功能 （默认关闭）
         .showCamera()
         // 拍照后存放的图片路径（默认 /temp/picture） （会自动创建）
-        .filePath("/ImageSelector/Pictures")
+        .filePath("/temp/picture")
         .build();
 
 
@@ -166,7 +166,7 @@ ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
         // 开启拍照功能 （默认关闭）
         .showCamera()
         // 拍照后存放的图片路径（默认 /temp/picture） （会自动创建）
-        .filePath("/ImageSelector/Pictures")
+        .filePath("/temp/picture")
         .build();
 
 
@@ -188,7 +188,7 @@ ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
         // 开启拍照功能 （默认关闭）
         .showCamera()
         // 拍照后存放的图片路径（默认 /temp/picture） （会自动创建）
-        .filePath("/ImageSelector/Pictures")
+        .filePath("/temp/picture")
         .build();
 
 
@@ -208,7 +208,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
      List<String> pathList = data.getStringArrayListExtra(ImageSelectorActivity.EXTRA_RESULT);
 
      for (String path : pathList) {
-         Log.i("ImagePathList", path);
+         Log.i("ImagePath", path);
      }
   }
 }
