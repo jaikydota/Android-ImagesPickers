@@ -7,7 +7,7 @@ Android-ImagesPickers是一个集图片选择（单选/多选）、拍照、裁�
 
 [Download Apk](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/app-debug.apk)
  
-Chinese blog address: http://blog.csdn.net/jaikydota163/article/details/52098880
+Chinese blog address: http://blog.csdn.net/jaikydota163/article/details/52098880 <br>
 项目中文博客地址：http://blog.csdn.net/jaikydota163/article/details/52098880
 
 ## 为什么使用ImagesPickers
