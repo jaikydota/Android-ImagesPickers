@@ -258,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ImageConfig imageConfig = new ImageConfig.Builder(
                         new GlideLoader())
-                        // 如果在 4.4 以上，则修改状态栏颜色
+                        // 修改状态栏颜色
                         .steepToolBarColor(getResources().getColor(R.color.titleBlue))
                         // 标题的背景颜色
                         .titleBgColor(getResources().getColor(R.color.titleBlue))
