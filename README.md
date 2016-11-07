@@ -1,5 +1,5 @@
 # Android-ImagesPickers
-Android-ImagesPickers是一个图片选择（单选/多选）、拍照、裁剪的图片选择器。使用方便，功能可自己配置，Android-ImagesPickers自身并没有强制绑定某个ImageLoader，开发者可以根据自己项目给Android-ImagesPickers配置图片加载器。<br>
+Android-ImagesPickers是一个集图片选择（单选/多选）、拍照、裁剪的图片选择工具。使用方便，通过设置参数可自己配置功能，Android-ImagesPickers自身并没有强制绑定某个图片加载器（如UIL,Glide,Fresco,Picasso），开发者可以根据自己项目给Android-ImagesPickers配置图片加载器。<br>
 
 ###[GitHub 项目地址](https://github.com/jaikydota/Android-ImagesPickers)
 
@@ -7,6 +7,8 @@ Android-ImagesPickers是一个图片选择（单选/多选）、拍照、裁剪�
 
 [Download Apk](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/app-debug.apk)
  
+Chinese blog address: http://blog.csdn.net/jaikydota163/article/details/52098880
+项目中文博客地址：http://blog.csdn.net/jaikydota163/article/details/52098880
 
 ## 为什么使用ImagesPickers
 也许有人会问：系统不是有相册选择器吗，为什么还有做一个图片选择器呢，有必要吗？我告诉你很有必要。微信，QQ等等App它们都是自己带图片选择器，并没有直接调系统的图片选择器。为什么要这么做呢？我总结出一下几点，使用本图片选择器下面的问题你都不用考虑，就是这么的任性：
@@ -27,14 +29,15 @@ Android-ImagesPickers是一个图片选择（单选/多选）、拍照、裁剪�
 ![Demo演示](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/GIF6.gif) 
 
  
-## 使用说明
+## 使用说明 Using
 
-### 步骤一：
+### Step One步骤一：
 
-#### 通过Gradle抓取
+#### 配置Gradle抓取 Configure Gradle crawling
 
 ```groovy
-//只上传到了jcenter,在项目gradle下使用jcenter
+//目前只上传到了jcenter,在项目gradle下使用jcenter
+//Currently only uploaded to the jcenter, under the project gradle use jcenter
 allprojects {
     repositories {
         jcenter()
@@ -43,17 +46,18 @@ allprojects {
 ```
 
 ```groovy
-//在module中添加依赖  
+//在module模块的gradle中添加依赖
+//Add dependencies in the module's gradle
 dependencies {
     compile 'com.jaikydota.imagespickers:imagespickers:1.0.0'
 }
 ```
 
 
-### 步骤二：
+### Step Two步骤二：
 
-在 `AndroidManifest.xml` 中 添加 如下权限
-
+在 `AndroidManifest.xml` 中 添加 如下权限<br>
+Add the following permissions in your AndroidManifest.xml
 ```xml
 <!-- 从sdcard中读取数据的权限 -->
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -63,9 +67,9 @@ dependencies {
 ```
 
 
-### 步骤三：
+### Step Three步骤三：
 
-#####创建 图片加载器 (其中可以按照 喜好  使用不同的 第三方图片加载框架 以下为Glide示例)
+#####创建 图片加载器 (其中可以按照 喜好  使用不同的 第三方图片加载框架 以下为Glide示例) Create an ImageLoader
 
 ```java
 public class GlideLoader implements com.yancy.imageselector.ImageLoader {
@@ -83,27 +87,27 @@ public class GlideLoader implements com.yancy.imageselector.ImageLoader {
 
 ```    
 
-### 步骤四：
+### Step Four步骤四：
 
-#### 配置 `ImageConfig`
+#### 配置 `ImageConfig` Configure
 
-##### UI 视图配置
+##### UI 视图配置 UI Configure
 
 ```java
  ImageConfig imageConfig
       = new ImageConfig.Builder(new GlideLoader())
-     // 如果在 4.4 以上，则修改状态栏颜色 （默认黑色）
+     // 修改状态栏颜色 
      .steepToolBarColor(getResources().getColor(R.color.blue))
-     // 标题的背景颜色 （默认黑色）
+     // 标题的背景颜色 
      .titleBgColor(getResources().getColor(R.color.blue))
-     // 提交按钮字体的颜色  （默认白色）
+     // 提交按钮字体的颜色 
      .titleSubmitTextColor(getResources().getColor(R.color.white))
-     // 标题颜色 （默认白色）
+     // 标题颜色
      .titleTextColor(getResources().getColor(R.color.white))
      .build();
 ```
 
-##### 多选
+##### 多选 Multiple choice
 ```java
  ImageConfig imageConfig
         = new ImageConfig.Builder(new GlideLoader())
@@ -127,7 +131,7 @@ public class GlideLoader implements com.yancy.imageselector.ImageLoader {
 ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
 ```
 
-##### 单选
+##### 单选 Single choice
 ```java
  ImageConfig imageConfig
         = new ImageConfig.Builder(new GlideLoader())
@@ -147,7 +151,7 @@ ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
 ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
 ```
 
-##### 单选1：1 便捷截图
+##### 单选1：1 便捷裁剪 Crop
 ```java
  ImageConfig imageConfig
         = new ImageConfig.Builder(new GlideLoader())
@@ -169,7 +173,7 @@ ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
 ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
 ```
 
-##### 单选自定义截图
+##### 单选自定义裁剪 Custon Crop
 ```java
  ImageConfig imageConfig
         = new ImageConfig.Builder(new GlideLoader())
@@ -190,7 +194,7 @@ ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
 
 ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
 ```
-### 步骤五：
+### Step Five步骤五：
  
 在  `onActivityResult` 中获取选中的照片路径 数组 :
  
@@ -210,7 +214,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
-## 代码示例
+## 代码示例 The code example
 ```java
 public class MainActivity extends AppCompatActivity {
 
@@ -253,15 +257,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ImageConfig imageConfig = new ImageConfig.Builder(
-                        // GlideLoader 可用自己用的缓存库
                         new GlideLoader())
-                        // 如果在 4.4 以上，则修改状态栏颜色 （默认黑色）
+                        // 如果在 4.4 以上，则修改状态栏颜色
                         .steepToolBarColor(getResources().getColor(R.color.titleBlue))
-                        // 标题的背景颜色 （默认黑色）
+                        // 标题的背景颜色
                         .titleBgColor(getResources().getColor(R.color.titleBlue))
-                        // 提交按钮字体的颜色  （默认白色）
+                        // 提交按钮字体的颜色
                         .titleSubmitTextColor(getResources().getColor(R.color.white))
-                        // 标题颜色 （默认白色）
+                        // 标题颜色
                         .titleTextColor(getResources().getColor(R.color.white))
                         // 开启多选   （默认为多选）  (单选 为 singleSelect)
                         //.singleSelect()
