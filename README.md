@@ -159,7 +159,7 @@ ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
         .titleBgColor(getResources().getColor(R.color.blue))
         .titleSubmitTextColor(getResources().getColor(R.color.white))
         .titleTextColor(getResources().getColor(R.color.white))
-        // (截图默认配置：关闭    比例 1：1    输出分辨率  500*500)
+        // (裁剪默认配置：关闭    比例 1：1    输出分辨率  500*500)
         .crop()  
         // 开启单选   （默认为多选） 
         .singleSelect()
@@ -181,7 +181,7 @@ ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
         .titleBgColor(getResources().getColor(R.color.blue))
         .titleSubmitTextColor(getResources().getColor(R.color.white))
         .titleTextColor(getResources().getColor(R.color.white))
-        // (截图默认配置：关闭    比例 1：1    输出分辨率  500*500)
+        // (裁剪默认配置：关闭    比例 1：1    输出分辨率  500*500)
         .crop(1, 2, 500, 1000) 
         // 开启单选   （默认为多选） 
         .singleSelect()
