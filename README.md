@@ -1,11 +1,11 @@
-# Andorid-ImagesPickers
-Andorid-ImagesPickers是一个图片选择（单选/多选）、拍照、裁剪的图片选择器。使用方便，功能可自己配置，Andorid-ImagesPickers自身并没有强制绑定某个ImageLoader，开发者可以根据自己项目给Andorid-ImagesPickers配置图片加载器。<br>
+# Android-ImagesPickers
+Android-ImagesPickers是一个图片选择（单选/多选）、拍照、裁剪的图片选择器。使用方便，功能可自己配置，Android-ImagesPickers自身并没有强制绑定某个ImageLoader，开发者可以根据自己项目给Android-ImagesPickers配置图片加载器。<br>
 
-###[GitHub 项目地址](https://github.com/jaikydota/Andorid-ImagesPickers)
+###[GitHub 项目地址](https://github.com/jaikydota/Android-ImagesPickers)
 
-![截图](https://github.com/jaikydota/Andorid-ImagesPickers/blob/master/Demo/GIF.gif) 
+![截图](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/GIF.gif) 
 
-[Download Apk](https://github.com/jaikydota/Andorid-ImagesPickers/blob/master/Demo/app-debug.apk)
+[Download Apk](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/app-debug.apk)
  
 
 ## 为什么使用ImagesPickers
@@ -24,7 +24,7 @@ Andorid-ImagesPickers是一个图片选择（单选/多选）、拍照、裁剪�
 
 ## Demo展示
 
-![Demo演示](https://github.com/jaikydota/Andorid-ImagesPickers/blob/master/Demo/GIF6.gif) 
+![Demo演示](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/GIF6.gif) 
 
  
 ## 使用说明
