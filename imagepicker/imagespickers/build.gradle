@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'imagespickers'
+
+    publishedGroupId = 'com.jaikydota.imagespickers'
+    libraryName = 'imagespickers'
+    artifact = 'imagespickers'
+
+    libraryDescription = 'An android images picker'
+
+    siteUrl = 'https://github.com/jaikydota/Andorid-ImagesPickers'
+    gitUrl = 'https://github.com/jaikydota/Andorid-ImagesPickers.git'
+
+    libraryVersion = '1.0.1'
+
+    developerId = 'jaikydota'
+    developerName = '欧 杰'
+    developerEmail = 'jaikydota@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 24
     buildToolsVersion "23.0.3"
@@ -21,30 +45,16 @@ android {
     }
 }
 
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:24.2.1'
+
 }
 
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'imagespickers'//在bintray网站中项目中填写的名称
-
-    publishedGroupId = 'com.jaiky.imagespickers'//一般为包名
-    libraryName = 'imagespickers'//library名字需要和本地的lib module一致
-    artifact = 'imagespickers'//同上
-
-    libraryDescription = 'An android images picker.'//项目描述
-    libraryVersion = '1.0.0'//项目版本号,只需要在每次更新的时候填写
-
-    developerId = 'jaiky'//开发者Id
-    developerName = 'Jaiky'//开发者名称
-    developerEmail = 'jaikydota@gmail.com'//邮箱
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ['Apache-2.0']
-}
-
-apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/bintrayv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

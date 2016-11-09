@@ -70,10 +70,10 @@ public class ImageSelectorActivity extends FragmentActivity implements ImageSele
 
 
         if (pathList == null || pathList.size() <= 0) {
-            submitButton.setText("完成");
+            submitButton.setText(getResources().getString(R.string.finish));
             submitButton.setEnabled(false);
         } else {
-            submitButton.setText("完成" + "(" + pathList.size() + "/" + imageConfig.getMaxSize() + ")");
+            submitButton.setText(getResources().getString(R.string.finish) + "(" + pathList.size() + "/" + imageConfig.getMaxSize() + ")");
             submitButton.setEnabled(true);
         }
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +89,7 @@ public class ImageSelectorActivity extends FragmentActivity implements ImageSele
         });
 
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -155,7 +156,7 @@ public class ImageSelectorActivity extends FragmentActivity implements ImageSele
             pathList.add(path);
         }
         if (pathList.size() > 0) {
-            submitButton.setText("完成" + "(" + pathList.size() + "/" + imageConfig.getMaxSize() + ")");
+            submitButton.setText(getResources().getString(R.string.finish) + "(" + pathList.size() + "/" + imageConfig.getMaxSize() + ")");
             if (!submitButton.isEnabled()) {
                 submitButton.setEnabled(true);
             }
@@ -166,25 +167,18 @@ public class ImageSelectorActivity extends FragmentActivity implements ImageSele
     public void onImageUnselected(String path) {
         if (pathList.contains(path)) {
             pathList.remove(path);
-            submitButton.setText("完成" + "(" + pathList.size() + "/" + imageConfig.getMaxSize() + ")");
+            submitButton.setText(getResources().getString(R.string.finish) + "(" + pathList.size() + "/" + imageConfig.getMaxSize() + ")");
         } else {
-            submitButton.setText("完成" + "(" + pathList.size() + "/" + imageConfig.getMaxSize() + ")");
+            submitButton.setText(getResources().getString(R.string.finish) + "(" + pathList.size() + "/" + imageConfig.getMaxSize() + ")");
         }
         if (pathList.size() == 0) {
-            submitButton.setText("完成");
+            submitButton.setText(getResources().getString(R.string.finish));
             submitButton.setEnabled(false);
         }
     }
 
     @Override
     public void onCameraShot(File imageFile) {
-//        if (imageFile != null) {
-//            Intent data = new Intent();
-//            pathList.add(imageFile.getAbsolutePath());
-//            data.putStringArrayListExtra(EXTRA_RESULT, pathList);
-//            setResult(RESULT_OK, data);
-//            exit();
-//        }
         if (imageFile != null) {
             if (imageConfig.isCrop()) {
                 crop(imageFile.getAbsolutePath(), imageConfig.getAspectX(), imageConfig.getAspectY(), imageConfig.getOutputX(), imageConfig.getOutputY());

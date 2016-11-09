@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ImageConfig imageConfig = new ImageConfig.Builder(
-                        // GlideLoader 可用自己用的缓存库
                         new GlideLoader())
                         // 如果在 4.4 以上，则修改状态栏颜色 （默认黑色）
                         .steepToolBarColor(getResources().getColor(R.color.titleBlue))

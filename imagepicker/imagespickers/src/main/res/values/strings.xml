@@ -20,7 +20,6 @@
     <string name="invalidSD">sdcard无效或没有插入！</string>
     <string name="album">相册</string>
     <string name="preview">预览</string>
-    <string name="unfinished">完成</string>
     <string name="camera_cancel">取消</string>
     <string name="no_photo">相册没有图片</string>
 </resources>

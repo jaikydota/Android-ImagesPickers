@@ -170,7 +170,6 @@ public class ImageSelectorFragment extends Fragment {
                 gridWidth = width;
                 gridHeight = height;
 
-                //�����п��
                 final int desireSize = getResources().getDimensionPixelOffset(R.dimen.image_size);
                 final int numCount = width / desireSize;
                 final int columnSpace = getResources().getDimensionPixelOffset(R.dimen.space_size);
@@ -196,7 +195,6 @@ public class ImageSelectorFragment extends Fragment {
                         selectImageFromGrid(image, imageConfig.isMutiSelect());
                     }
                 } else {
-                    // ��������
                     Image image = (Image) adapterView.getAdapter().getItem(i);
                     selectImageFromGrid(image, imageConfig.isMutiSelect());
                 }
@@ -206,9 +204,6 @@ public class ImageSelectorFragment extends Fragment {
 
     }
 
-    /**
-     * ����������ListView
-     */
     private void createPopupFolderList(int width, int height) {
     	
         folderPopupWindow = new ListPopupWindow(getActivity());
@@ -235,8 +230,8 @@ public class ImageSelectorFragment extends Fragment {
 
                         if (index == 0) {
                             getActivity().getSupportLoaderManager().restartLoader(LOADER_ALL, null, mLoaderCallback);
-                            category_button.setText("����ͼƬ");
-                            callback.onChangeAlbum("����ͼƬ");
+                            category_button.setText(R.string.all_folder);
+                            callback.onChangeAlbum(context.getResources().getString(R.string.all_folder));
                             if (imageConfig.isShowCamera()) {
                                 imageAdapter.setShowCamera(true);
                             } else {
@@ -252,7 +247,6 @@ public class ImageSelectorFragment extends Fragment {
 
                                 category_button.setText(folder.name);
                                 callback.onChangeAlbum(folder.name);
-                                // �趨Ĭ��ѡ��
                                 if (resultList != null && resultList.size() > 0) {
                                     imageAdapter.setDefaultSelected(resultList);
                                 }
@@ -260,7 +254,6 @@ public class ImageSelectorFragment extends Fragment {
                             imageAdapter.setShowCamera(false);
                         }
 
-                        // ���������ʼλ��
                         grid_image.smoothScrollToPosition(0);
                     }
                 }, 100);
@@ -306,15 +299,9 @@ public class ImageSelectorFragment extends Fragment {
         super.onConfigurationChanged(newConfig);
     }
 
-    /**
-     * ѡ�����
-     */
     private void showCameraAction() {
-        // ��ת��ϵͳ�����
         Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (cameraIntent.resolveActivity(getActivity().getPackageManager()) != null) {
-            // ����ϵͳ������պ�����·��
-            // ������ʱ�ļ�
             tempFile = FileUtils.createTmpFile(getActivity(), imageConfig.getFilePath());
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(tempFile));
             startActivityForResult(cameraIntent, REQUEST_CAMERA);
