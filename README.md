@@ -49,7 +49,7 @@ allprojects {
 //在module模块的gradle中添加依赖
 //Add dependencies in the module's gradle
 dependencies {
-    compile 'com.jaikydota.imagespickers:imagespickers:1.0.0'
+    compile 'com.jaikydota.imagespickers:imagespickers:1.0.1'
 }
 ```
 
