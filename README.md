@@ -305,7 +305,11 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
+## 历史版本
+### 1.0.1 
+* 部分中文乱码修复，bug修复
+
+### 1.0.0 
+* 基本图片选择功能
  
-## 关于作者
-* Email: [jaikydota@163.com](mailto:jaikydota@163.com)
 
