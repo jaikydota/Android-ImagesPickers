@@ -50,6 +50,9 @@ allprojects {
 //Add dependencies in the module's gradle
 dependencies {
     compile 'com.jaikydota.imagespickers:imagespickers:1.0.1'
+    
+    //如果使用图片加载框架，添加依赖，下面用Glide示例
+    compile 'com.github.bumptech.glide:glide:3.6.1'
 }
 ```
 
@@ -69,7 +72,7 @@ Add the following permissions in your AndroidManifest.xml
 
 ### Step Three步骤三：
 
-#####创建 图片加载器 (其中可以按照 喜好  使用不同的 第三方图片加载框架 以下为Glide示例) Create an ImageLoader
+#####创建图片加载器 (其中可以按照 喜好 使用不同的 第三方图片加载框架 以下为Glide示例) Create an ImageLoader
 
 ```java
 public class GlideLoader implements com.yancy.imageselector.ImageLoader {
@@ -107,7 +110,7 @@ public class GlideLoader implements com.yancy.imageselector.ImageLoader {
      .build();
 ```
 
-##### 多选 Multiple choice
+##### 多选 Multiple Choice
 ```java
  ImageConfig imageConfig
         = new ImageConfig.Builder(new GlideLoader())
@@ -131,7 +134,7 @@ public class GlideLoader implements com.yancy.imageselector.ImageLoader {
 ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
 ```
 
-##### 单选 Single choice
+##### 单选 Single Choice
 ```java
  ImageConfig imageConfig
         = new ImageConfig.Builder(new GlideLoader())
