@@ -49,7 +49,7 @@ allprojects {
 //在module模块的gradle中添加依赖
 //Add dependencies in the module's gradle
 dependencies {
-    compile 'com.jaikydota.imagespickers:imagespickers:1.0.1'
+    compile 'com.jaikydota.imagespickers:imagespickers:1.0.6'
     
     //如果使用图片加载框架，添加依赖，下面用Glide示例
     compile 'com.github.bumptech.glide:glide:3.6.1'
