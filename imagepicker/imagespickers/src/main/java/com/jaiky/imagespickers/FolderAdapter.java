@@ -73,12 +73,6 @@ public class FolderAdapter extends BaseAdapter {
                     Folder folder = folderList.get(0);
 
                     imageConfig.getImageLoader().displayImage(context, folder.cover.path, holder.folder_image);
-
-//                    Glide.with(context)
-//                            .load(new File(folder.cover.path))
-//                            .placeholder(R.mipmap.imageselector_photo)
-//                            .centerCrop()
-//                            .into(holder.folder_image);
                 }
             } else {
 
@@ -87,12 +81,6 @@ public class FolderAdapter extends BaseAdapter {
                 holder.image_num_text.setText("" + folder.images.size() + (context.getResources().getText(R.string.sheet)));
 
                 imageConfig.getImageLoader().displayImage(context, folder.cover.path, holder.folder_image);
-
-//                Glide.with(context)
-//                        .load(new File(folder.cover.path))
-//                        .placeholder(R.mipmap.imageselector_photo)
-//                        .centerCrop()
-//                        .into(holder.folder_image);
             }
 
             if (lastSelected == position) {

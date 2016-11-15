@@ -1,4 +1,4 @@
-package com.jaiky.imagespickers;
+package com.jaiky.imagespickers.utils;
 
 import android.content.Context;
 import android.os.Environment;

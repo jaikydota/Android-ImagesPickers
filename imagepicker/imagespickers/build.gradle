@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/jaikydota/Andorid-ImagesPickers'
     gitUrl = 'https://github.com/jaikydota/Andorid-ImagesPickers.git'
 
-    libraryVersion = '1.0.1'
+    libraryVersion = '1.0.6'
 
     developerId = 'jaikydota'
     developerName = '欧 杰'

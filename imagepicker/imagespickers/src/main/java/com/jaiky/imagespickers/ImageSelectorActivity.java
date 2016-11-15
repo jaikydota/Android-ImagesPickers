@@ -13,6 +13,8 @@ import android.view.Window;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.jaiky.imagespickers.utils.Utils;
+
 import java.io.File;
 import java.util.ArrayList;
 
@@ -52,8 +54,6 @@ public class ImageSelectorActivity extends FragmentActivity implements ImageSele
     }
 
     private void init() {
-
-        //submitButton.setTextColor(imageConfig.getTitleSubmitTextColor());
         title_text.setTextColor(imageConfig.getTitleTextColor());
         imageselector_title_bar_layout.setBackgroundColor(imageConfig.getTitleBgColor());
 
@@ -64,7 +64,7 @@ public class ImageSelectorActivity extends FragmentActivity implements ImageSele
             @Override
             public void onClick(View view) {
                 setResult(RESULT_CANCELED);
-                exit();
+                finish();
             }
         });
 
@@ -80,10 +80,7 @@ public class ImageSelectorActivity extends FragmentActivity implements ImageSele
             @Override
             public void onClick(View view) {
                 if (pathList != null && pathList.size() > 0) {
-                    Intent data = new Intent();
-                    data.putStringArrayListExtra(EXTRA_RESULT, pathList);
-                    setResult(RESULT_OK, data);
-                    exit();
+                    SelectedFinish();
                 }
             }
         });
@@ -93,17 +90,23 @@ public class ImageSelectorActivity extends FragmentActivity implements ImageSele
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //裁剪返回
         if (requestCode == ImageSelector.IMAGE_CROP_CODE && resultCode == RESULT_OK) {
-            Intent intent = new Intent();
             pathList.add(cropImagePath);
-            intent.putStringArrayListExtra(EXTRA_RESULT, pathList);
-            setResult(RESULT_OK, intent);
-            exit();
+            SelectedFinish();
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void exit() {
+    private void SelectedFinish() {
+        Intent intent = new Intent();
+        intent.putStringArrayListExtra(EXTRA_RESULT, pathList);
+        setResult(RESULT_OK, intent);
+
+        //改变gridview的内容
+        if (imageConfig.getContainerAdapter() != null) {
+            imageConfig.getContainerAdapter().refreshData(pathList, imageConfig.getImageLoader());
+        }
         finish();
     }
 
@@ -142,11 +145,8 @@ public class ImageSelectorActivity extends FragmentActivity implements ImageSele
         if (imageConfig.isCrop()) {
             crop(path, imageConfig.getAspectX(), imageConfig.getAspectY(), imageConfig.getOutputX(), imageConfig.getOutputY());
         } else {
-            Intent data = new Intent();
             pathList.add(path);
-            data.putStringArrayListExtra(EXTRA_RESULT, pathList);
-            setResult(RESULT_OK, data);
-            exit();
+            SelectedFinish();
         }
     }
 
@@ -182,13 +182,9 @@ public class ImageSelectorActivity extends FragmentActivity implements ImageSele
         if (imageFile != null) {
             if (imageConfig.isCrop()) {
                 crop(imageFile.getAbsolutePath(), imageConfig.getAspectX(), imageConfig.getAspectY(), imageConfig.getOutputX(), imageConfig.getOutputY());
-            }
-            else {
-                Intent data = new Intent();
+            } else {
                 pathList.add(imageFile.getAbsolutePath());
-                data.putStringArrayListExtra(EXTRA_RESULT, pathList);
-                setResult(RESULT_OK, data);
-                exit();
+                SelectedFinish();
             }
         }
     }

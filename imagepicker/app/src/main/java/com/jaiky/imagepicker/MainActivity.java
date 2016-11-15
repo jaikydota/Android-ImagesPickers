@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jaiky.imagespickers.ImageConfig;
@@ -22,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
     public static final int REQUEST_CODE = 123;
 
+    private ImageConfig imageConfig;
+
+    private LinearLayout llContainer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,20 +35,24 @@ public class MainActivity extends AppCompatActivity {
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
         tv1 = (TextView) findViewById(R.id.tv1);
+        llContainer = (LinearLayout) findViewById(R.id.llContainer);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImageConfig imageConfig = new ImageConfig.Builder(
+                imageConfig = new ImageConfig.Builder(
                         new GlideLoader())
                         .steepToolBarColor(getResources().getColor(R.color.titleBlue))
                         .titleBgColor(getResources().getColor(R.color.titleBlue))
                         .titleSubmitTextColor(getResources().getColor(R.color.white))
                         .titleTextColor(getResources().getColor(R.color.white))
-                        // 开启单选   （默认为多选）  (单选 为 singleSelect)
+                        // 开启单选   （默认为多选）
                         .singleSelect()
+                        // 裁剪 (只有单选可裁剪)
                         //.crop()
-                        // 开启拍照功能 （默认开启）
-                        //.showCamera()
+                        // 开启拍照功能 （默认关闭）
+                        .showCamera()
+                        //设置显示容器
+                        .setContainer(llContainer)
                         .requestCode(REQUEST_CODE)
                         .build();
                 ImageSelector.open(MainActivity.this, imageConfig);
@@ -52,27 +61,23 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImageConfig imageConfig = new ImageConfig.Builder(
+                imageConfig = new ImageConfig.Builder(
                         new GlideLoader())
-                        // 如果在 4.4 以上，则修改状态栏颜色 （默认黑色）
                         .steepToolBarColor(getResources().getColor(R.color.titleBlue))
-                        // 标题的背景颜色 （默认黑色）
                         .titleBgColor(getResources().getColor(R.color.titleBlue))
-                        // 提交按钮字体的颜色  （默认白色）
                         .titleSubmitTextColor(getResources().getColor(R.color.white))
-                        // 标题颜色 （默认白色）
                         .titleTextColor(getResources().getColor(R.color.white))
-                        // 开启多选   （默认为多选）  (单选 为 singleSelect)
-                        //.singleSelect()
-                        //裁剪
-                        //.crop()
+                        // 开启多选   （默认为多选）
+                        .mutiSelect()
                         // 多选时的最大数量   （默认 9 张）
                         .mutiSelectMaxSize(9)
+                        //设置图片显示容器，参数：、（容器，每行显示数量，是否可删除）
+                        .setContainer(llContainer, 4, true)
                         // 已选择的图片路径
                         .pathList(path)
                         // 拍照后存放的图片路径（默认 /temp/picture）
                         .filePath("/temp")
-                        // 开启拍照功能 （默认开启）
+                        // 开启拍照功能 （默认关闭）
                         .showCamera()
                         .requestCode(REQUEST_CODE)
                         .build();
@@ -91,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
             tv1.setText("");
             for (String path : pathList) {
                 tv1.append(path);
+                tv1.append("\n");
             }
 
             path.clear();

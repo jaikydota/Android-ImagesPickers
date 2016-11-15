@@ -1,10 +1,16 @@
 package com.jaiky.imagespickers;
 
 
+import android.view.ViewGroup;
+import android.widget.GridView;
+
+import com.jaiky.imagespickers.container.GridViewForScrollView;
+import com.jaiky.imagespickers.container.SimpleImageAdapter;
+import com.jaiky.imagespickers.utils.FileUtils;
+import com.jaiky.imagespickers.utils.Utils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
 public class ImageConfig {
 
@@ -33,6 +39,12 @@ public class ImageConfig {
 
     private int requestCode;
 
+    //是否开启预览
+    private boolean isPreview;
+
+    //适配器
+    private SimpleImageAdapter containerAdapter;
+
 
     private ImageConfig(final Builder builder) {
         this.maxSize = builder.maxSize;
@@ -54,6 +66,9 @@ public class ImageConfig {
         this.titleTextColor = builder.titleTextColor;
         this.titleSubmitTextColor = builder.titleSubmitTextColor;
         this.steepToolBarColor = builder.steepToolBarColor;
+
+        this.isPreview = builder.isPreview;
+        this.containerAdapter = builder.containerAdapter;
 
         FileUtils.createFile(this.filePath);
     }
@@ -81,6 +96,9 @@ public class ImageConfig {
         private int steepToolBarColor = 0XFF000000;
 
         private ArrayList<String> pathList = new ArrayList<String>();
+
+        private boolean isPreview = true;
+        private SimpleImageAdapter containerAdapter;
 
 
         public Builder(ImageLoader imageLoader) {
@@ -159,9 +177,60 @@ public class ImageConfig {
         }
 
 
+        public Builder closePreview() {
+            this.isPreview = false;
+            return this;
+        }
+
+        public Builder setContainer(ViewGroup container){
+            return setContainer(container, 4, false);
+        }
+
+        public Builder setContainer(ViewGroup container, int rowImageCount, boolean isDelete) {
+            if (container.getChildCount() == 0) {
+                //新建一个GridView
+                GridViewForScrollView gvView = new GridViewForScrollView(container.getContext());
+                ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT);
+                gvView.setLayoutParams(layoutParams);
+
+                if (isDelete) {
+                    //间距3dp
+                    gvView.setHorizontalSpacing(Utils.dip2px(container.getContext(), 3));
+                    gvView.setVerticalSpacing(Utils.dip2px(container.getContext(), 3));
+                } else {
+                    //间距10dp
+                    gvView.setHorizontalSpacing(Utils.dip2px(container.getContext(), 10));
+                    gvView.setVerticalSpacing(Utils.dip2px(container.getContext(), 10));
+                }
+                gvView.setNumColumns(rowImageCount);
+                gvView.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
+
+                //设置适配器，暂时数据为控
+                containerAdapter = new SimpleImageAdapter(container, isDelete, rowImageCount);
+                gvView.setAdapter(containerAdapter);
+                container.addView(gvView);
+            }
+            else {
+                GridViewForScrollView gvView = (GridViewForScrollView) container.getChildAt(0);
+                containerAdapter = (SimpleImageAdapter) gvView.getAdapter();
+            }
+            return this;
+        }
+
+
         public ImageConfig build() {
             return new ImageConfig(this);
         }
+    }
+
+    //获取容器适配器
+    public SimpleImageAdapter getContainerAdapter() {
+        return containerAdapter;
+    }
+
+    public boolean isPreview() {
+        return isPreview;
     }
 
     public boolean isCrop() {

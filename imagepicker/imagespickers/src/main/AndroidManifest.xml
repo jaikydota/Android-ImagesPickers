@@ -16,6 +16,11 @@
             android:name="com.jaiky.imagespickers.ImageSelectorActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/ImageSelectorTheme"/>
+        <activity
+            android:name=".preview.MultiImgShowActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImageShowTheme" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.jaiky.imagespickers;
+package com.jaiky.imagespickers.utils;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
