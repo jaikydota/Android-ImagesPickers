@@ -1,5 +1,5 @@
 # Android-ImagesPickers
-Android-ImagesPickers是一个集图片选择（单选/多选）、拍照、裁剪、图片预览、图片显示容器的图片选择显示工具。使用方便，通过设置参数可自己配置功能，Android-ImagesPickers自身并没有强制绑定某个图片加载器（如UIL,Glide,Fresco,Picasso），开发者可以根据自己项目给Android-ImagesPickers配置图片加载器。<br>
+Android-ImagesPickers是一个集图片选择（单选/多选）、拍照、裁剪、图片预览、图片显示容器的图片选择显示工具。使用方便，开发者仅需要几行的代码就可以集成Android整套图片“选裁显删”功能，可以通过设置参数选择自己想要使用的功能，Android-ImagesPickers自身并没有强制绑定某个图片加载器（如UIL,Glide,Fresco,Picasso），开发者可以根据自己项目需求给Android-ImagesPickers配置图片加载器。<br>
 
 ###[GitHub 项目地址](https://github.com/jaikydota/Android-ImagesPickers)
 
@@ -8,13 +8,13 @@ Android-ImagesPickers是一个集图片选择（单选/多选）、拍照、裁�
 
 ![Gif2](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/GIF6.gif) 
 
-[Download Apk](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/app-debug.apk)
+[Download Demo Apk](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/app-debug.apk)
  
 Chinese blog address: http://blog.csdn.net/jaikydota163/article/details/52098880 <br>
 项目中文博客地址：http://blog.csdn.net/jaikydota163/article/details/52098880
 
 ## 为什么使用ImagesPickers
-也许有人会问：系统不是有相册选择器吗，为什么还有做一个图片选择器呢，有必要吗？我告诉你很有必要。微信，QQ等等App它们都是自己带图片选择器，并没有直接调系统的图片选择器。为什么要这么做呢？我总结出一下几点，使用本图片选择器下面的问题你都不用考虑，就是这么的任性：
+也许有人会问：系统不是有相册选择器吗，为什么还有做一个图片选择器呢，有必要吗？我告诉你很有必要。微信，QQ等等App它们都是自己带图片选择器，并没有直接调系统的图片选择器。为什么要这么做呢？我总结出以下几点，使用本图片选择器下面的问题你都不用考虑，就是这么的任性：
  * 最大的问题就是兼容性了，手机厂商那么多，相册软件那么多从而引起各种奇葩的问题
  * 有些手机拍照图片倒立情况（如三星和魅族）
  * 拿到的bitmap或uri为空
@@ -28,18 +28,18 @@ Chinese blog address: http://blog.csdn.net/jaikydota163/article/details/52098880
 
 
 ## Demo展示
-下面的图片按显示顺序：
+下面的Demo图片按显示顺序：
  - 图片裁剪
  - 图片预览
  - 图片容器
  - 图片容器带删除
- - 图片容器自定义数量
+ - 图片容器自定义每行数量
 
 ![图片裁剪](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss1.png) 
 ![图片预览](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss5.png)
-![图片容器不可删除](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss3.png) 
-![图片容器可删除](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss2.png) 
-![图片容器自定义数量](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss4.png) 
+![图片容器](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss3.png) 
+![图片容器带删除](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss2.png) 
+![图片容器自定义每行数量](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss4.png) 
 
  
 ## 使用说明 Using
