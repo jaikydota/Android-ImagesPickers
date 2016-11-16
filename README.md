@@ -3,7 +3,10 @@ Android-ImagesPickers是一个集图片选择（单选/多选）、拍照、裁�
 
 ###[GitHub 项目地址](https://github.com/jaikydota/Android-ImagesPickers)
 
-![Gif1](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/GIF.gif)  ![Gif2](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/GIF6.gif) 
+![Gif1](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/GIF.gif)  
+
+
+![Gif2](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/GIF6.gif) 
 
 [Download Apk](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/app-debug.apk)
  
