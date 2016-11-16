@@ -200,6 +200,14 @@ ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
 
 ```
 
+##### 关闭图片预览 Close the image preview
+```java
+//配置ImageConfig添加方法
+// (关闭图片预览功能，默认开启)
+.closePreview() 
+
+```
+
 ### Step Five步骤五：
  
 在  `onActivityResult` 中获取选中的照片路径 数组 :
