@@ -30,16 +30,17 @@ Chinese blog address: http://blog.csdn.net/jaikydota163/article/details/52098880
 ## Demo展示
 下面的图片按显示顺序：
  - 图片裁剪
+ - 图片预览
  - 图片容器可删除
  - 图片容器不可删除
  - 图片容器自定义数量
- - 图片预览
 
 ![图片裁剪](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss1.png) 
-![图片容器可删除](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss1.png) 
-![图片容器不可删除](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss1.png) 
-![图片容器自定义数量](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss1.png) 
-![图片预览](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss1.png) 
+![图片预览](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss5.png)
+![图片容器可删除](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss2.png) 
+![图片容器不可删除](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss3.png) 
+![图片容器自定义数量](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/ss4.png) 
+
  
 ## 使用说明 Using
 
