@@ -88,16 +88,16 @@ Add the following permissions in your AndroidManifest.xml
 #####创建图片加载器 (其中可以按照 喜好 使用不同的 第三方图片加载框架 以下为Glide示例) Create an ImageLoader
 
 ```java
-public class GlideLoader implements com.yancy.imageselector.ImageLoader {
+public class GlideLoader implements ImageLoader {
 
    @Override
    public void displayImage(Context context, String path, ImageView imageView) {
-       Glide.with(context)
-               .load(path)
-               .placeholder(com.yancy.imageselector.R.mipmap.imageselector_photo)
-               .centerCrop()
-               .into(imageView);
-   }
+        Glide.with(context)
+                .load(path)
+                .placeholder(R.drawable.global_img_default)
+                .centerCrop()
+                .into(imageView);
+    }
 
 }
 
