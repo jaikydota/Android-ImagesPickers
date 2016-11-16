@@ -1,4 +1,4 @@
-# Android-ImagesPickers （即将发布1.0.6最新版本，功能大升级，敬请期待）
+# Android-ImagesPickers
 Android-ImagesPickers是一个集图片选择（单选/多选）、拍照、裁剪、图片预览、图片显示容器的图片选择显示工具。使用方便，通过设置参数可自己配置功能，Android-ImagesPickers自身并没有强制绑定某个图片加载器（如UIL,Glide,Fresco,Picasso），开发者可以根据自己项目给Android-ImagesPickers配置图片加载器。<br>
 
 ###[GitHub 项目地址](https://github.com/jaikydota/Android-ImagesPickers)
