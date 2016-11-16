@@ -185,7 +185,8 @@ ImageSelector.open(MainActivity.this, imageConfig);   // 开启图片选择器
 ##### 设置显示容器 Set the display container
 ```java
 //配置ImageConfig添加方法
-// (设置容器，默认会添加一个子视图到容器布局，继承自ViewGroup如Linearlayout，注意容器布局中不要有其他子视图，可自己对容器布局设置宽度、Margin)
+// (设置容器，默认会添加一个子视图到容器布局，继承自ViewGroup如Linearlayout
+// 注意容器布局中不要有其他子视图，可自己对容器布局设置宽度、Margin)
 // 默认每行显示4个，不带删除
 .setContainer(ViewGroup container) 
 
