@@ -8,7 +8,7 @@ Android-ImagesPickers是一个集图片选择（单选/多选）、拍照、裁�
 
 ![Gif2](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/GIF6.gif) 
 
-[Download Demo Apk](https://github.com/jaikydota/Android-ImagesPickers/blob/master/Demo/app-debug.apk)
+[Download Demo Apk](https://raw.githubusercontent.com/jaikydota/Android-ImagesPickers/blob/master/Demo/app-debug.apk)
  
 Chinese blog address: http://blog.csdn.net/jaikydota163/article/details/52098880 <br>
 项目中文博客地址：http://blog.csdn.net/jaikydota163/article/details/52098880
