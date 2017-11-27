@@ -341,5 +341,8 @@ public class MainActivity extends AppCompatActivity {
 
 ### 1.0.0 
 * 基本图片选择功能
- 
 
+
+## License
+
+[Apache License 2.0](LICENSE)
